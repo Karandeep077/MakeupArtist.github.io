@@ -1,0 +1,17 @@
+<footer class="footer text-center py-4 " style="background-color: black;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 justify-content: space-between" >
+            <h5 style="color: white;">
+            @2023 Copyright: <span>Rishika Kaur</span>&nbsp; &nbsp;
+            {{#each user}}
+            <span>
+              &nbsp; &nbsp;
+              <a href="{{this.SocialLink}}" class="{{this.tags}}" target="_blank"></a>
+            </span>
+            {{/each}}
+            </h5>
+          </div>
+        </div>
+      </div>
+</footer>

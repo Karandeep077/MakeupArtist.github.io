@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Makeup Artist</title>
+  </head>
+  <body>
+    {{>navbar data=details}}
+
+    {{>slider slides=slides}}
+
+
+    {{!-- Bannner 1 Section  --}}
+
+    <section class="banner1_section py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>We work for people</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae ullam laboriosam saepe, atque recusandae excepturi mollitia rerum aliquam, similique modi reiciendis vel eveniet consequuntur, quod ratione at! Officia, doloremque.</p>
+            <button class="btn btn-primary">Know More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+       {{!-- Service Section  --}}
+
+
+    <section id="services-section" class="py-2">
+      <h1 class="text-center text-secondary">Our Services</h1>
+      <div class="container">
+        <div class="row mt-5">
+
+          {{#each services}}
+          <div class="col-md-4 py-3">
+            <div class="card ">
+              <div class="card-body">
+                <div class="container">
+                   <div class="container1 service_image text-center py-3">
+                     <img src="{{this.icon}}" alt="HTML5 Icon" width="128" height="128">
+                   </div>
+                </div>
+                <h4 class="card-title">{{this.title}}</h4>
+                <p>{{this.description}}</p>
+                <a href="{{this.linkText}}">{{this.link}}</a>
+                <a href="#!" class="ml-3">Support</a>
+              </div>
+            </div>
+
+          </div>
+          {{/each}}
+
+      </div>
+      </div>
+    </section>
+
+
+     {{!-- Bannner 2 Section  --}}
+
+    <section class="banner2_section py-5 pt-2">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 pt-5">
+            <h1>We work for people, not money</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae ullam laboriosam saepe, atque recusandae excepturi mollitia rerum aliquam, similique modi reiciendis vel eveniet consequuntur, quod ratione at! Officia, doloremque.</p>
+            <button class="btn btn-primary">Click Here</button>
+          </div>
+          <div class="col-md-6 pt-5">
+            <video width="550" height="300" autoplay loop muted>
+              <source src="/static/video/v1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     {{!-- Banner 3 Section  --}}
+
+     <section class="banner3_section py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 pt-2">
+            <video width="550" height="300" autoplay loop muted>
+              <source src="/static/video/v3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="col-md-6 pt-5 py-2">
+            <h1>We work for people, not money</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae ullam laboriosam saepe, atque recusandae excepturi mollitia rerum aliquam, similique modi reiciendis vel eveniet consequuntur, quod ratione at! Officia, doloremque.</p>
+            <button class="btn btn-primary">Click Here</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+     
+
+
+    {{!-- Instagram Section  --}}
+
+
+    <section class="instagram_section py-5 ">
+      <div class="container text-center">
+        <h2 class="text-secondary py-5 pt5">
+          <span>
+            <i style="color: rgb(188, 21, 188);" class="fa-brands fa-instagram example1"></i>
+          </span>
+          <span>Instagram</span>
+          </h2>
+        <div class="row">
+          <div class="col-md-12">
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-a76f0bb8-1362-4f57-bff3-49b27e5ca80f"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    {{!-- About Section  --}}
+
+    <section class="about_section py-5" id="about_section">
+      <div class="container text-center">
+        <h3 class="text-secondary py-5 pt-5">About Us</h3>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus consequatur voluptate excepturi veniam tempora molestiae totam ratione quod debitis dolorem. Beatae nemo quisquam dolorem, ab nisi ex qui quod? Ea!</p>
+            <button class="btn btn-primary btn-lg">Success</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    {{!-- Contact Section  --}}
+
+    <section id="contact_us_section" class=" py-5 ">
+      <h3 class="text-center text-secondary py-5 pt-5">Contact Us</h3>
+      <div id="contact-container">
+                <div id="contact-form-container">
+                    <form id="contact-form" action="/process-contact-form" method="post" class="background1">
+                        <input id="email" name="email" type="text" required placeholder="Your Email">
+                        <input id="phone" name="phone" type="number" placeholder="Your Phone Number">
+                        <textarea id="message" name="query" rows="2" cols="30" placeholder="Message"></textarea>
+                        <button class="sub-btn cont" type="submit">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div id="my-details-container">
+                    <h3> Get In touch </h3>
+                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+                    <h3> My Address </h3>
+                    <div class="my-details-info-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lucknow, India</span>
+                    </div>
+                    <div class="my-details-info-container">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>7080091921</span>
+                    </div>
+                    <div class="my-details-info-container">
+                        <i class="far fa-envelope"></i>
+                        <span>rishikakaur18@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+     {{!-- Footer Section  --}}
+
+    {{!-- <footer class="footer text-center py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            @2023 Copyright: <span>Rishika Kaur</span>
+          </div>
+        </div>
+      </div>
+    </footer> --}}
+
+    {{>footer user=user}}
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
